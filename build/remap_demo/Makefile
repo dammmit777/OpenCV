@@ -80,14 +80,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ssm/OpenCV_C++/build/CMakeFiles /home/ssm/OpenCV_C++/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/ssm/OpenCV_C++/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ssm/OpenCV_C++/build/CMakeFiles /home/ssm/OpenCV_C++/build/remap_demo/CMakeFiles/progress.marks
+	cd /home/ssm/OpenCV_C++/build && $(MAKE) -f CMakeFiles/Makefile2 remap_demo/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ssm/OpenCV_C++/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/ssm/OpenCV_C++/build && $(MAKE) -f CMakeFiles/Makefile2 remap_demo/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,31 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ssm/OpenCV_C++/build && $(MAKE) -f CMakeFiles/Makefile2 remap_demo/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ssm/OpenCV_C++/build && $(MAKE) -f CMakeFiles/Makefile2 remap_demo/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ssm/OpenCV_C++/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named remap_demo
+# Convenience name for target.
+remap_demo/CMakeFiles/remap_demo.dir/rule:
+	cd /home/ssm/OpenCV_C++/build && $(MAKE) -f CMakeFiles/Makefile2 remap_demo/CMakeFiles/remap_demo.dir/rule
+.PHONY : remap_demo/CMakeFiles/remap_demo.dir/rule
 
-# Build rule for target.
-remap_demo: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 remap_demo
+# Convenience name for target.
+remap_demo: remap_demo/CMakeFiles/remap_demo.dir/rule
+
 .PHONY : remap_demo
 
 # fast build rule for target.
 remap_demo/fast:
-	$(MAKE) -f remap_demo/CMakeFiles/remap_demo.dir/build.make remap_demo/CMakeFiles/remap_demo.dir/build
+	cd /home/ssm/OpenCV_C++/build && $(MAKE) -f remap_demo/CMakeFiles/remap_demo.dir/build.make remap_demo/CMakeFiles/remap_demo.dir/build
 .PHONY : remap_demo/fast
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	cd /home/ssm/OpenCV_C++/build && $(MAKE) -f remap_demo/CMakeFiles/remap_demo.dir/build.make remap_demo/CMakeFiles/remap_demo.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	cd /home/ssm/OpenCV_C++/build && $(MAKE) -f remap_demo/CMakeFiles/remap_demo.dir/build.make remap_demo/CMakeFiles/remap_demo.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	cd /home/ssm/OpenCV_C++/build && $(MAKE) -f remap_demo/CMakeFiles/remap_demo.dir/build.make remap_demo/CMakeFiles/remap_demo.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -132,6 +161,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... remap_demo"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
@@ -143,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ssm/OpenCV_C++/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

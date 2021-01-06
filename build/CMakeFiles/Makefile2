@@ -60,57 +60,57 @@ CMAKE_SOURCE_DIR = /home/ssm/OpenCV_C++
 CMAKE_BINARY_DIR = /home/ssm/OpenCV_C++/build
 
 #=============================================================================
-# Directory level rules for directory houghcircle_demo
+# Directory level rules for directory remap_demo
 
 # Convenience name for "all" pass in the directory.
-houghcircle_demo/all: houghcircle_demo/CMakeFiles/houghcircle_demo.dir/all
+remap_demo/all: remap_demo/CMakeFiles/remap_demo.dir/all
 
-.PHONY : houghcircle_demo/all
+.PHONY : remap_demo/all
 
 # Convenience name for "clean" pass in the directory.
-houghcircle_demo/clean: houghcircle_demo/CMakeFiles/houghcircle_demo.dir/clean
+remap_demo/clean: remap_demo/CMakeFiles/remap_demo.dir/clean
 
-.PHONY : houghcircle_demo/clean
+.PHONY : remap_demo/clean
 
 # Convenience name for "preinstall" pass in the directory.
-houghcircle_demo/preinstall:
+remap_demo/preinstall:
 
-.PHONY : houghcircle_demo/preinstall
+.PHONY : remap_demo/preinstall
 
 #=============================================================================
-# Target rules for target houghcircle_demo/CMakeFiles/houghcircle_demo.dir
+# Target rules for target remap_demo/CMakeFiles/remap_demo.dir
 
 # All Build rule for target.
-houghcircle_demo/CMakeFiles/houghcircle_demo.dir/all:
-	$(MAKE) -f houghcircle_demo/CMakeFiles/houghcircle_demo.dir/build.make houghcircle_demo/CMakeFiles/houghcircle_demo.dir/depend
-	$(MAKE) -f houghcircle_demo/CMakeFiles/houghcircle_demo.dir/build.make houghcircle_demo/CMakeFiles/houghcircle_demo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ssm/OpenCV_C++/build/CMakeFiles --progress-num=1,2 "Built target houghcircle_demo"
-.PHONY : houghcircle_demo/CMakeFiles/houghcircle_demo.dir/all
+remap_demo/CMakeFiles/remap_demo.dir/all:
+	$(MAKE) -f remap_demo/CMakeFiles/remap_demo.dir/build.make remap_demo/CMakeFiles/remap_demo.dir/depend
+	$(MAKE) -f remap_demo/CMakeFiles/remap_demo.dir/build.make remap_demo/CMakeFiles/remap_demo.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ssm/OpenCV_C++/build/CMakeFiles --progress-num=1,2 "Built target remap_demo"
+.PHONY : remap_demo/CMakeFiles/remap_demo.dir/all
 
 # Include target in all.
-all: houghcircle_demo/CMakeFiles/houghcircle_demo.dir/all
+all: remap_demo/CMakeFiles/remap_demo.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-houghcircle_demo/CMakeFiles/houghcircle_demo.dir/rule: cmake_check_build_system
+remap_demo/CMakeFiles/remap_demo.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ssm/OpenCV_C++/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 houghcircle_demo/CMakeFiles/houghcircle_demo.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 remap_demo/CMakeFiles/remap_demo.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ssm/OpenCV_C++/build/CMakeFiles 0
-.PHONY : houghcircle_demo/CMakeFiles/houghcircle_demo.dir/rule
+.PHONY : remap_demo/CMakeFiles/remap_demo.dir/rule
 
 # Convenience name for target.
-houghcircle_demo: houghcircle_demo/CMakeFiles/houghcircle_demo.dir/rule
+remap_demo: remap_demo/CMakeFiles/remap_demo.dir/rule
 
-.PHONY : houghcircle_demo
-
-# clean rule for target.
-houghcircle_demo/CMakeFiles/houghcircle_demo.dir/clean:
-	$(MAKE) -f houghcircle_demo/CMakeFiles/houghcircle_demo.dir/build.make houghcircle_demo/CMakeFiles/houghcircle_demo.dir/clean
-.PHONY : houghcircle_demo/CMakeFiles/houghcircle_demo.dir/clean
+.PHONY : remap_demo
 
 # clean rule for target.
-clean: houghcircle_demo/CMakeFiles/houghcircle_demo.dir/clean
+remap_demo/CMakeFiles/remap_demo.dir/clean:
+	$(MAKE) -f remap_demo/CMakeFiles/remap_demo.dir/build.make remap_demo/CMakeFiles/remap_demo.dir/clean
+.PHONY : remap_demo/CMakeFiles/remap_demo.dir/clean
+
+# clean rule for target.
+clean: remap_demo/CMakeFiles/remap_demo.dir/clean
 
 .PHONY : clean
 

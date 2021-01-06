@@ -333,6 +333,12 @@ recVideo_BINARY_DIR:STATIC=/home/ssm/OpenCV_C++/build/recVideo
 recVideo_SOURCE_DIR:STATIC=/home/ssm/OpenCV_C++/recVideo
 
 //Value Computed by CMake
+remap_demo_BINARY_DIR:STATIC=/home/ssm/OpenCV_C++/build/remap_demo
+
+//Value Computed by CMake
+remap_demo_SOURCE_DIR:STATIC=/home/ssm/OpenCV_C++/remap_demo
+
+//Value Computed by CMake
 smoothing_BINARY_DIR:STATIC=/home/ssm/OpenCV_C++/build/smoothing
 
 //Value Computed by CMake
