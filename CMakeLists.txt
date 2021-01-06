@@ -1,0 +1,37 @@
+cmake_minimum_required(VERSION 2.8)
+
+
+list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)#cmake 模块路径
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)#可执行文件输出路径
+
+#OpenCV
+find_package(OpenCV 3.1 REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
+
+#add_subdirectory(IO_image)
+#add_subdirectory(recVideo)
+#add_subdirectory(displayImage)
+#add_subdirectory(change_image)
+#add_subdirectory(study_mat)
+#add_subdirectory(how_to_scan_images)
+#add_subdirectory(mat_mask_operations)
+#add_subdirectory(mat_operations)
+#add_subdirectory(addingImages)
+#add_subdirectory(change_the_contrast)
+#add_subdirectory(matrix)
+#add_subdirectory(DFT)
+#add_subdirectory(file_input_output)
+#add_subdirectory(interoperability_with_OpenCV_1)
+#add_subdirectory(smoothing)
+#add_subdirectory(eroding_and_dilating)
+#add_subdirectory(more_mroph_trans)
+#add_subdirectory(horizon_and_vertical)
+#add_subdirectory(pyramid)
+#add_subdirectory(threshold)
+#add_subdirectory(filter2D_Demo)
+#add_subdirectory(copyMakeBorder_Demo)
+#add_subdirectory(sobel_demo)
+#add_subdirectory(laplace_demo)
+#add_subdirectory(cannyDetector_demo)
+#add_subdirectory(houghlines_demo)
+add_subdirectory(houghcircle_demo)

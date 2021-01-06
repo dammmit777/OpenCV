@@ -1,0 +1,4 @@
+project(interoperability_with_OpenCV_1)
+
+add_executable(interoperability_with_OpenCV_1 main.cpp)
+target_link_libraries(interoperability_with_OpenCV_1 ${OpenCV_LIBS})
