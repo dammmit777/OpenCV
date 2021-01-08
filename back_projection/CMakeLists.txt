@@ -1,0 +1,4 @@
+project(back_projection)
+
+add_executable(calcBackProject_Demo1 calcBackProject_Demo1.cpp)
+target_link_libraries(calcBackProject_Demo1 ${OpenCV_LIBS})
