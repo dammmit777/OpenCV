@@ -5,3 +5,6 @@ target_link_libraries(calcBackProject_Demo1 ${OpenCV_LIBS})
 
 add_executable(calcBackProject_Demo2 calcBackProject_Demo2.cpp)
 target_link_libraries(calcBackProject_Demo2 ${OpenCV_LIBS})
+
+add_executable(camshiftdemo camshiftdemo.cpp)
+target_link_libraries(camshiftdemo ${OpenCV_LIBS})
