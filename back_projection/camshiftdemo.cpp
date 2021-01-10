@@ -1,3 +1,13 @@
+/**
+ * @file camshiftdemo.cpp
+ * @author ssm
+ * @brief 应用 CamShift 算法实现目标跟踪
+ * @version 0.1
+ * @date 2021-01-10
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include <opencv2/core/utility.hpp>
 #include <opencv2/video/tracking.hpp>
 #include <opencv2/imgproc.hpp>
