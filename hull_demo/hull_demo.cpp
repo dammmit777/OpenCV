@@ -1,16 +1,14 @@
 /**
  * @file hull_demo.cpp
  * @author ssm
- * @brief 在多维空间中有一群散布各处的点，“凸包”是包裹这群点的所有外壳当中，表面积及容积最小的一个
- *         而，最小的外壳一定是凸的
+ * @brief 在多维空间中有一群散布各处的点，“凸包”是包裹这群点的所有外壳当中，表面积及容积最小的一个而最小的外壳一定是凸的
+ * 
  * @version 0.1
  * @date 2021-01-13
  * 
  * @copyright Copyright (c) 2021
  * 
  */
-
-
 
 #include <opencv2/imgproc.hpp>
 #include <opencv2/imgcodecs.hpp>
@@ -57,7 +55,6 @@ int main(int argc, char **argv)
     return 0;
 }
 
-
 /**
  * @brief 找到图像的轮廓，并保存拐点，根据拐点画出凸包
  * 
@@ -69,13 +66,13 @@ void thresh_callback(int, void *)
     Canny(src_gray, edges, thresh, thresh * 2);
 
     //find contours
-    vector<vector<Point> > contours;
+    vector<vector<Point>> contours;
     vector<Vec4i> hierarchy;
     //检测所有轮廓，并建立等级树，但是只保存轮廓的拐点信息
     findContours(edges, contours, hierarchy, RETR_TREE, CHAIN_APPROX_SIMPLE);
 
     //find the convex hull object for each contour
-    vector<vector<Point> > hull(contours.size());
+    vector<vector<Point>> hull(contours.size());
     for (size_t i = 0; i < contours.size(); i++)
     {
         convexHull(contours[i], hull[i]);
@@ -91,7 +88,6 @@ void thresh_callback(int, void *)
 
     imshow("result", drawing);
 }
-
 
 /**
  * @brief void convexHull(InputArray points, OutputArray hull, bool clockwise=false, bool returnPoints=true);
