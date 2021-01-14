@@ -1,3 +1,13 @@
+/**
+ * @file main.cpp
+ * @author ssm
+ * @brief 为图形轮廓绘制矩形边框和圆
+ * @version 0.1
+ * @date 2021-01-14
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include <opencv2/imgproc.hpp>
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/highgui.hpp>
