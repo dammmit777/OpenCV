@@ -1,0 +1,4 @@
+project(bounding_boxes_and_circles)
+
+add_executable(bounding_boxes_and_circles main.cpp)
+target_link_libraries(bounding_boxes_and_circles ${OpenCV_LIBS})
