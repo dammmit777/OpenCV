@@ -4,23 +4,25 @@
 using namespace cv;
 
 Mat img, new_img;
-int alpha = 0; //simple contrast control
-int beta = 0;  //simple brightness control
+int alpha_slider = 0; //simple contrast control
+int beta_slider = 0;  //simple brightness control
 
 void on_track(int, void *)
 {
-    // for (int i = 0; i < img.rows; i++)
-    // {
-    //     for (int j = 0; j < img.cols; j++)
-    //     {
-    //         for (int c = 0; c < 3; c++)
-    //         {
-    //             new_img.at<Vec3b>(i, j)[c] = saturate_cast<uchar>((double)alpha * (img.at<Vec3b>(i, j)[c]) + (double)beta);
-    //         }
-    //     }
-    // }
-    img.convertTo(new_img, -1, (double)alpha, (double)beta);
-    imshow("New Image", new_img);
+    double alpha = alpha_slider / 100;
+    for (int i = 0; i < img.rows; i++)
+    {
+        for (int j = 0; j < img.cols; j++)
+        {
+            for (int c = 0; c < 3; c++)
+            {
+                new_img.at<Vec3b>(i, j)[c] = saturate_cast<uchar>((double)alpha * (img.at<Vec3b>(i, j)[c]) + (double)beta_slider);
+            }
+        }
+    }
+
+    //img.convertTo(new_img, -1, (double)alpha, (double)beta_slider);
+    imshow("Contrast Image", new_img);
 }
 
 int main(int argc, char **argv)
@@ -36,13 +38,12 @@ int main(int argc, char **argv)
     // std::cin >> beta;
 
     namedWindow("Original Image", WINDOW_AUTOSIZE);
-    namedWindow("New Image", WINDOW_AUTOSIZE);
-    createTrackbar("alpha", "Original Image", &alpha, 3, on_track);
-    createTrackbar("beta", "Original Image", &beta, 100, on_track);
+    namedWindow("Contrast Image", WINDOW_AUTOSIZE);
+    createTrackbar("alpha", "Original Image", &alpha_slider, 300, on_track);
+    createTrackbar("beta", "Original Image", &beta_slider, 100, on_track);
     on_track(0, 0);
 
     imshow("Original Image", img);
-    
 
     waitKey(0);
 

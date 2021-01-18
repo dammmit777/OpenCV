@@ -20,7 +20,7 @@ using namespace cv;
 Mat src, dst, tmp;
 const char *windowname = "Pyramids Demo";
 
-int main(void)
+int main(int argc, char **argv)
 {
     std::cout << "\n Zoom In-Out demo" << std::endl;
     std::cout << "--------------------" << std::endl;
@@ -28,7 +28,7 @@ int main(void)
     std::cout << " * [d] -> Zoon out" << std::endl;
     std::cout << "* [ESC] -> Close program" << std::endl;
 
-    src = imread("smoothing/ubuntu.png");
+    src = imread(argv[1]);
     if (src.empty())
     {
         std::cout << "no data !" << std::endl;
