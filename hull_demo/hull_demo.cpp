@@ -66,13 +66,13 @@ void thresh_callback(int, void *)
     Canny(src_gray, edges, thresh, thresh * 2);
 
     //find contours
-    vector<vector<Point>> contours;
+    vector<vector<Point> > contours;
     vector<Vec4i> hierarchy;
     //检测所有轮廓，并建立等级树，但是只保存轮廓的拐点信息
     findContours(edges, contours, hierarchy, RETR_TREE, CHAIN_APPROX_SIMPLE);
 
     //find the convex hull object for each contour
-    vector<vector<Point>> hull(contours.size());
+    vector<vector<Point> > hull(contours.size());
     for (size_t i = 0; i < contours.size(); i++)
     {
         convexHull(contours[i], hull[i]);

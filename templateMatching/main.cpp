@@ -50,7 +50,7 @@ void matchingMethod(int, void *)
     //创建 result 矩阵存放每个匹配结果
     int result_cols = image.cols - templ.cols + 1;
     int result_rows = image.rows - templ.rows + 1;
-    result.create(result.rows, result.cols, CV_32FC1);
+    result.create(result_rows, result_cols, CV_32FC1);
 
     //执行模板匹配
     matchTemplate(image, templ, result, match_method);

@@ -41,11 +41,12 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 #add_subdirectory(calcHist_demo)
 #add_subdirectory(compareHist_demo)
 #add_subdirectory(back_projection)
-#add_subdirectory(templateMatching)#写博客
+add_subdirectory(templateMatching)#写博客
 #add_subdirectory(findContours_demo)#写博客
 #add_subdirectory(hull_demo)
 #add_subdirectory(bounding_boxes_and_circles)
 #add_subdirectory(pointPolyTest_demo)
 #add_subdirectory(imageSegmentation)
 #add_subdirectory(video_input_psnr_ssim)
-add_subdirectory(video_write)
+#add_subdirectory(video_write)
+add_subdirectory(roi)
